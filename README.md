@@ -15,6 +15,8 @@ Node is included. This is an unsigned beta; use the official release assets and 
 
 ## Updating and backups
 
-Make a backup from Patchline before updating. Quit the old app using **Local beta → Quit Patchline**, extract the new ZIP, and open its launcher. Your data stays in `%LOCALAPPDATA%\Patchline Beta`.
+Make a backup from Patchline before updating. Quit the old app, extract the new ZIP, and open its launcher. Your data stays in `%LOCALAPPDATA%\Patchline Beta`.
+
+To stop the app, click **Quit Patchline** below the sidebar's region and timezone, use **Settings & backups → Local app**, or open **Stop Patchline.cmd**. Closing the browser alone leaves the app running. Older downloads have **Local beta → App controls → Quit Patchline**.
 
 This repository distributes release packages. Each package includes third-party licenses and source attribution for game schedules. Game names and artwork belong to their respective publishers.
