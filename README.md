@@ -6,6 +6,13 @@ Patchline brings gacha game schedules, saved events, useful resources and pull e
 
 Your favourites and saved events stay on your PC. Cached schedules appear first, and schedule imports refresh in the background while you use the app. Internet is needed for fresh source data, remote artwork and linked resources; cached schedules remain available when imports fail.
 
+## Beta 3
+
+- **Event Clock:** a dedicated workspace for approaching deadlines, with large countdowns, urgency colours and time remaining bars.
+- **Health & status:** check automatic features, last successful updates and source coverage, with filters for individual games.
+- **Leaks:** refreshed source lists and in-page viewing where the source supports it, including NTE community sources.
+- **Saved events:** artwork fills each card's image area consistently.
+
 ## Requirements
 
 - Windows 11 x64.
