@@ -4,7 +4,7 @@ Patchline brings gacha game schedules, saved events, useful resources and pull e
 
 **Windows browser beta:** download the Windows x64 ZIP from [Releases](https://github.com/Keo-Reinz/patchline-downloads/releases), extract it, and open **Start Patchline.cmd**. It opens in your normal browser and needs no account.
 
-Your favourites and saved events stay on your PC. Schedule imports refresh while you use the app. Internet is needed for fresh source data, remote artwork and linked resources; cached schedules remain available when imports fail.
+Your favourites and saved events stay on your PC. Cached schedules appear first, and schedule imports refresh in the background while you use the app. Internet is needed for fresh source data, remote artwork and linked resources; cached schedules remain available when imports fail.
 
 ## Requirements
 
