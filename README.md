@@ -1,50 +1,53 @@
-# Patchline beta downloads
+# Patchlines downloads
 
-Patchline brings gacha game schedules, saved events, resources and pull estimates into one local app.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local app for Windows 11 x64.
 
-**[Download Beta 4.1 for Windows x64](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.4.1).** Extract the entire ZIP and open **Start Patchline.cmd**. It opens in your normal browser and needs no account. Node is included.
+## Microsoft Store — coming after certification
 
-Your favourites, saved events and cached schedules stay on your PC. Fresh imports, remote artwork and linked resources need internet; failed imports retain the last successful schedules.
+Microsoft Store will be the main official Windows download. The Store release is currently a draft and is not available yet. It must complete certification and be published before you can download it.
 
-## Beta 4.1
+Once published, install Patchlines through Microsoft Store and open it from Start. Microsoft Store will manage app installation and updates.
 
-- Rotating gallery is the default background for new browsers and profiles. Existing appearance choices stay saved; **Reset appearance** selects the new default. Reduced motion keeps the background still.
+## Portable ZIP — available now
 
-This release also includes the Beta 4 features:
+Use the GitHub ZIP if you prefer to extract the app and start it yourself.
 
-- Fourteen games, including Genshin Impact and hololive Dreams, with additional official and community source coverage.
-- Schedule binders for earlier running events, compact/comfortable cards, supported featured portraits and reward icons, clearer date headers and scrolling titles.
-- Event Clock with larger artwork, urgency counters, aligned deadlines and live time remaining bars.
-- Full scrollable announcement history, individual read receipts and a compact list view.
-- Today checklists, clearer deadline durations, browser reminders and local Discord reminders using your own channel webhook.
-- Reorderable favourites, rotating game backgrounds, adjustable glass effects and event artwork zoom/pan.
-- Supported version updates, translation controls, source health, automatic local backups and private diagnostic exports.
+**[Download portable Beta 4.1 for Windows x64](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.4.1/Patchline-0.1.0-beta.4.1-windows-x64.zip)** · [SHA256 checksum](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.4.1/Patchline-0.1.0-beta.4.1-windows-x64.zip.sha256) · [Release notes](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.4.1)
 
-Source coverage and translation availability vary. Unknown dates and estimated rewards retain their caveats. The release notes explain the supported behavior and limits.
+1. Extract the entire ZIP into a normal folder on your PC.
+2. Open **Start Patchline.cmd** and wait for startup to finish.
+3. Patchline opens in your usual browser. Keep the extracted folder while using the app.
 
-## Manual PowerShell startup
+Node is included. The ZIP needs no account, Node installation or npm commands.
 
-Open the extracted folder containing `launcher.mjs` and `runtime`. In File Explorer's address bar, type `powershell` and press Enter. Paste:
+### Manual PowerShell startup
+
+Open the extracted folder containing `launcher.mjs` and `runtime`. Type `powershell` in File Explorer's address bar and press Enter, then paste:
 
 ```powershell
 & .\runtime\node.exe --use-system-ca .\launcher.mjs --no-browser
 ```
 
-Wait for the ready message and open its printed local address in your browser. Keep PowerShell open; **Ctrl+C** or **Quit Patchline** stops the app. The ZIP includes `Manual startup.txt` with the full instructions.
+Wait for the ready message and open its printed address in your browser. Keep PowerShell open. **Ctrl+C** or **Quit Patchline** stops the app. The ZIP includes `Manual startup.txt` with the full instructions.
 
-## Requirements
+### Portable ZIP requirements and updates
 
-- Windows 11 x64.
-- Microsoft's Visual C++ x64 runtime, already present on many PCs. If missing, use the [official installer](https://aka.ms/vc14/vc_redist.x64.exe).
+The ZIP supports Windows 11 x64. Some PCs need Microsoft's [Visual C++ x64 Redistributable](https://aka.ms/vc14/vc_redist.x64.exe).
 
-Use the official release assets and accompanying SHA256 checksum. The beta contains signed OpenJS Node and unsigned Cloudflare workerd. Windows Smart App Control may block the runtime even with manual startup. The command option does not establish trust for workerd; keep Windows protections enabled and report the blocked filename if startup fails.
+It contains signed OpenJS Node and unsigned Cloudflare workerd. Smart App Control may block the runtime with either startup method. Keep Windows protections enabled and report the blocked filename if startup fails.
 
-## Updating, backups and reminders
+Export a backup from **Settings & backups** before updating. Quit the app, extract the next ZIP into a new folder, and start the new copy. The portable profile remains in `%LOCALAPPDATA%\Patchline Beta` and is reused. ZIP app updates are installed manually.
 
-Export a backup from **Settings & backups**, quit the old app, extract Beta 4.1 into a new folder and start it. Your local profile stays in `%LOCALAPPDATA%\Patchline Beta` and is reused by the new version. Local automatic backups retain seven normal and three pre-upgrade copies.
+To stop the normal launcher, use **Quit Patchline** or **Stop Patchline.cmd**. Closing the browser alone leaves it running. Before switching download routes, export a backup and restore it from the new app's settings.
 
-To stop the app, click **Quit Patchline**, use **Settings & backups → Local app**, or open **Stop Patchline.cmd**. Closing the browser alone leaves the normal launcher running.
+## Data and source coverage
 
-Browser reminders need notification permission and an open tab. Local Discord reminders need a connected incoming webhook, automatic checks enabled, the app running and the PC awake and online. Nothing refreshes or sends while the runtime is stopped. Webhook credentials are excluded from exported backups and diagnostics.
+Favourites, saved events and cached schedules stay on your PC. Fresh imports, remote artwork and linked resources need internet. Failed imports keep the last successful cache. Source coverage varies; unknown dates and estimated rewards retain their labels.
 
-This repository distributes release packages. A ZIP update does not update the separately hosted website. Each package includes third-party licenses and source attribution. Game names and artwork belong to their respective publishers.
+Browser reminders need notification permission and an open tab. Local Discord reminders need a configured webhook, automatic checks enabled, and the app running on an awake, online PC. Webhook credentials are excluded from backups and diagnostics.
+
+Each package includes third-party licenses and source attribution. Game names and artwork belong to their respective publishers.
+
+## Privacy and support
+
+Read the [privacy policy](PRIVACY.md). For help, [open a support issue](https://github.com/Keo-Reinz/patchline-downloads/issues) without including private backups or credentials.
