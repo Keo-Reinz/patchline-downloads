@@ -1,26 +1,40 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local app for Windows 11 x64.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local app for Windows 11 x64. The local app works without a Patchlines account.
 
-## Microsoft Store — coming after certification
+## Choose a download
 
-Microsoft Store will be the main official Windows download. The Store release is currently a draft and is not available yet. It must complete certification and be published before you can download it.
+| Download | Who it is for | Updates |
+| --- | --- | --- |
+| Microsoft Store | The main official Windows route, once certification and publication finish | Microsoft Store |
+| Unsigned installer | Install from an EXE and launch from Start | App controls checks GitHub Releases |
+| Portable ZIP | Extract a folder and start the included launcher | App controls checks GitHub Releases |
 
-Once published, install Patchlines through Microsoft Store and open it from Start. Microsoft Store will manage app installation and updates.
+**The Microsoft Store download link will be added after publication is confirmed.** Store certification and publication are separate from these GitHub releases.
 
-## Portable ZIP — available now
+**[Download the Beta 5 installer](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.5/Patchlines-0.1.0-beta.5-windows-x64-setup.exe)** · [Installer SHA256](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.5/Patchlines-0.1.0-beta.5-windows-x64-setup.exe.sha256)
 
-Use the GitHub ZIP if you prefer to extract the app and start it yourself.
+Run the installer and follow its prompts, then open **Patchlines** from Start. Node is bundled; no command line, Node installation or GitHub login is needed.
 
-**[Download portable Beta 4.1 for Windows x64](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.4.1/Patchline-0.1.0-beta.4.1-windows-x64.zip)** · [SHA256 checksum](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.4.1/Patchline-0.1.0-beta.4.1-windows-x64.zip.sha256) · [Release notes](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.4.1)
+**[Download the portable Beta 5 ZIP](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.5/Patchline-0.1.0-beta.5-windows-x64.zip)** · [ZIP SHA256](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.5/Patchline-0.1.0-beta.5-windows-x64.zip.sha256) · [Release notes](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.5)
 
 1. Extract the entire ZIP into a normal folder on your PC.
-2. Open **Start Patchline.cmd** and wait for startup to finish.
-3. Patchline opens in your usual browser. Keep the extracted folder while using the app.
+2. Open **Patchlines.exe** or **Start Patchline.cmd** and wait for startup to finish.
+3. Patchlines opens in your usual browser. Keep the extracted folder while using the app.
 
-Node is included. The ZIP needs no account, Node installation or npm commands.
+The installer and ZIP are unsigned beta downloads. Windows or security software can still warn about or block them. Do not import a test certificate to install these editions.
 
-### Manual PowerShell startup
+## Updates
+
+Beta 5 checks for new public GitHub releases at startup and every six hours while running. Open **App controls** to check manually, see release information, choose **Download update**, then **Restart to update**. The app verifies and stages the download before replacing program files. Saved data stays in the separate local profile. Export a collection backup from Settings & backups before an update if you want an additional copy.
+
+The latest previous-version app and profile recovery copies are kept; older completed recovery copies are removed after a healthy update where cleanup succeeds. If power loss interrupts replacement, quit any running app and use that update workspace's **Restore Patchline.cmd** beside the application folder to restore the previous version. Do not share recovery files publicly.
+
+The ZIP and installer edition share `%LOCALAPPDATA%\Patchline Beta` and reuse an existing portable profile. Store editions use a separate profile; export and restore a collection backup when changing between Store and GitHub editions. Browser appearance and permissions may need to be selected again.
+
+**Beta 4.1 and earlier need one manual upgrade to Beta 5.** Quit the old app, install Beta 5 or extract its ZIP into a new folder, then open the new copy. Future updates can use the new App controls flow. A GitHub source commit alone does not produce an app update; the maintainer publishes a packaged release first.
+
+## Manual PowerShell startup
 
 Open the extracted folder containing `launcher.mjs` and `runtime`. Type `powershell` in File Explorer's address bar and press Enter, then paste:
 
@@ -30,24 +44,16 @@ Open the extracted folder containing `launcher.mjs` and `runtime`. Type `powersh
 
 Wait for the ready message and open its printed address in your browser. Keep PowerShell open. **Ctrl+C** or **Quit Patchline** stops the app. The ZIP includes `Manual startup.txt` with the full instructions.
 
-### Portable ZIP requirements and updates
+## Requirements and local data
 
-The ZIP supports Windows 11 x64. Some PCs need Microsoft's [Visual C++ x64 Redistributable](https://aka.ms/vc14/vc_redist.x64.exe).
-
-It contains signed OpenJS Node and unsigned Cloudflare workerd. Smart App Control may block the runtime with either startup method. Keep Windows protections enabled and report the blocked filename if startup fails.
-
-Export a backup from **Settings & backups** before updating. Quit the app, extract the next ZIP into a new folder, and start the new copy. The portable profile remains in `%LOCALAPPDATA%\Patchline Beta` and is reused. ZIP app updates are installed manually.
-
-To stop the normal launcher, use **Quit Patchline** or **Stop Patchline.cmd**. Closing the browser alone leaves it running. Before switching download routes, export a backup and restore it from the new app's settings.
-
-## Data and source coverage
+Windows 11 x64 is the supported target. Some PCs need Microsoft's [Visual C++ x64 Redistributable](https://aka.ms/vc14/vc_redist.x64.exe). The package contains signed OpenJS Node and unsigned Cloudflare workerd. Manual startup uses the same runtime and may encounter the same Windows block. Report the exact blocked filename if startup fails.
 
 Favourites, saved events and cached schedules stay on your PC. Fresh imports, remote artwork and linked resources need internet. Failed imports keep the last successful cache. Source coverage varies; unknown dates and estimated rewards retain their labels.
 
-Browser reminders need notification permission and an open tab. Local Discord reminders need a configured webhook, automatic checks enabled, and the app running on an awake, online PC. Webhook credentials are excluded from backups and diagnostics.
+Browser reminders need notification permission and an open tab. Local Discord reminders need a configured webhook, automatic checks enabled, and the app running on an awake, online PC. The optional Discord source reader uses a dedicated bot and approved channels; it runs only while the local app runs. Discord credentials are protected for the current Windows user and excluded from collection backups and diagnostics.
+
+Closing the browser alone leaves the app running. Use **Quit Patchline** or **Stop Patchline.cmd**. Uninstalling/removing the program does not automatically erase separate portable data, browser data or exported backups; the privacy policy explains deletion.
 
 Each package includes third-party licenses and source attribution. Game names and artwork belong to their respective publishers.
-
-## Privacy and support
 
 Read the [privacy policy](PRIVACY.md). For help, [open a support issue](https://github.com/Keo-Reinz/patchline-downloads/issues) without including private backups or credentials.
