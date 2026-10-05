@@ -1,0 +1,56 @@
+name: Refresh shared announcement feed
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: patchlines-shared-feed
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Check out public feed files
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Use the collector runtime
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24.21.0'
+          package-manager-cache: false
+      - name: Verify the reviewed collector artifact
+        working-directory: tools
+        run: sha256sum --check shared-feed-collector.mjs.sha256
+      - name: Collect public schedules and official announcements
+        run: node --use-system-ca tools/shared-feed-collector.mjs
+        env:
+          PATCHLINE_DISCORD_BOT_TOKEN: ${{ secrets.PATCHLINE_DISCORD_BOT_TOKEN }}
+      - name: Commit only the public feed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          node --input-type=module <<'JS'
+          import {readFile} from 'node:fs/promises';
+          const expected='keo-reinz/patchline-downloads';
+          if(process.env.GITHUB_REPOSITORY?.toLowerCase()!==expected)throw new Error('Unexpected public feed repository.');
+          const pathname='data/announcements-v1.json',content=await readFile(pathname);
+          if(content.length>8*1024*1024)throw new Error('Shared feed exceeds its public byte limit.');
+          const base=`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}/contents/${pathname}`;
+          const headers={Authorization:`Bearer ${process.env.GITHUB_TOKEN}`,Accept:'application/vnd.github+json','Content-Type':'application/json','User-Agent':'Patchlines-Shared-Feed','X-GitHub-Api-Version':'2022-11-28'};
+          const current=await fetch(base,{headers,redirect:'error',signal:AbortSignal.timeout(30000)});
+          if(!current.ok&&current.status!==404)throw new Error(`Feed baseline request returned ${current.status}.`);
+          const previous=current.ok?await current.json():null;
+          const response=await fetch(base,{method:'PUT',headers,body:JSON.stringify({message:'Refresh public announcement feed',content:content.toString('base64'),...(previous?.sha?{sha:previous.sha}:{})}),redirect:'error',signal:AbortSignal.timeout(30000)});
+          if(!response.ok)throw new Error(`Feed publication returned ${response.status}.`);
+          console.log('Public announcement feed refreshed.');
+          JS

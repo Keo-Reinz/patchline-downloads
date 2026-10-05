@@ -1,0 +1,9 @@
+{
+  "format": "patchline-shared-collector-runtime",
+  "version": 1,
+  "filename": "shared-feed-collector.mjs",
+  "sha256": "c60de3e9918db2118a693615f6c5ec91eac57fc8be9da67070c6ec08bfd37317",
+  "bytes": 277088,
+  "sourceMaps": false,
+  "containsProfileData": false
+}
