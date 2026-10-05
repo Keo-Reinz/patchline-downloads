@@ -1,46 +1,84 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local app for Windows 11 x64. Beta 7 adds configurable uninstall choices and project removal to its native launcher. The local app works without a Patchlines account.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 8** adds announcement review, Windows reminders, a compact gameplay overlay, Today customisation, launcher news, a dedicated app window and a choice of installation folder. No Patchlines account is required.
 
 ## Choose a download
 
-| Download | Who it is for | Updates |
+**[Open the Beta 8 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.8)** and expand **Assets**.
+
+| Download | File to choose | How to use it |
 | --- | --- | --- |
-| Microsoft Store | The main official Windows route, once certification and publication finish | Microsoft Store |
-| Unsigned installer | Install from an EXE and open the project launcher from Start | Launcher and App controls check GitHub Releases |
-| Portable ZIP | Extract a folder and open the included project launcher | Launcher and App controls check GitHub Releases |
+| Windows installer | `Patchlines-0.1.0-beta.8-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.8-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
-**The Microsoft Store download link will be added after publication is confirmed.** Store certification and publication are separate from these GitHub releases.
+The release also includes a matching `.sha256` file for each download. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
 
-**[Download the Beta 7 installer](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.7/Patchlines-0.1.0-beta.7-windows-x64-setup.exe)** · [Installer SHA256](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.7/Patchlines-0.1.0-beta.7-windows-x64-setup.exe.sha256)
+### Installer
 
-Run the installer and follow its prompts, then open **Patchlines** from Start. Select **Patchline** and press **Start**. Node is bundled; no command line, Node installation or GitHub login is needed.
+1. Download and open the setup EXE.
+2. Use the default installation folder or choose a dedicated folder with **Browse**. The exact entered folder is used.
+3. Click **Install** (or **Update** for an existing installation), then open **Patchlines** from Start.
+4. Select **Patchlines** in the launcher and press **Start**.
 
-**[Download the portable Beta 7 ZIP](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.7/Patchline-0.1.0-beta.7-windows-x64.zip)** · [ZIP SHA256](https://github.com/Keo-Reinz/patchline-downloads/releases/download/v0.1.0-beta.7/Patchline-0.1.0-beta.7-windows-x64.zip.sha256) · [Release notes](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.7)
+The default folder is `%LOCALAPPDATA%\Programs\Patchlines` for the current Windows account. Existing registered installations are selected for upgrades. To move one, uninstall both the project and launcher with **Keep saved data**, then install in the new folder. Saved data stays separately in `%LOCALAPPDATA%\Patchline Beta`.
+
+### Portable ZIP
 
 1. Extract the entire ZIP into a normal folder on your PC.
-2. Open **Patchlines.exe** to enter the project launcher.
-3. Select **Patchline** and press **Start**. The launcher hides while the project opens in your usual browser. Keep the extracted folder while using the app.
+2. Open **Patchlines.exe**.
+3. Select **Patchlines** and press **Start**. Keep the extracted folder while using the app.
 
-Choosing **Quit Patchline** stops the project and brings the launcher back, with Start ready to reopen it. The launcher shows project artwork, information and release news, with a catalog that can grow as new projects are added. Patchline is the first available project.
+Node is bundled. Neither route needs a command line, a separate Node installation or a GitHub login.
 
-**Start Patchline.cmd** remains available to start the app directly in your browser. Manual PowerShell instructions are below. Direct startup keeps its own restart instructions after quitting.
+## The launcher and app window
 
-The installer and ZIP are unsigned beta downloads. Windows or security software can still warn about or block them. Do not import a test certificate to install these editions.
+Start opens the project in its own resizable Windows window. The launcher hides and remains in the system tray. Closing the app window or choosing **Quit Patchline** stops the project and brings the launcher back. Minimise leaves it running. Patchlines is the first available project; the launcher catalog can grow as more projects are released.
+
+The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choose **Retry**, **Open in browser**, or the official Microsoft runtime download page. The browser edition is also available through **Start Patchline.cmd** or manual startup below. Closing a browser tab leaves the backend running; use **Quit Patchline** to stop it.
+
+The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
+
+## What's in Beta 8
+
+- **Announcements & review:** search and filter collected notices, browse older results, preview images and open videos at their source, mark read or hide posts, review evidence and open matching events.
+- **Windows reminders and tray:** optional native alerts and shortcuts to Today, the launcher, pause reminders and quit.
+- **Gameplay overlay:** a compact game-specific window with events, banners, deadlines and checklists; drag, resize, opacity, click-through lock and show/hide shortcuts.
+- **Today customisation:** arrange sections, pin games, select an ending-soon window, edit recurring tasks and choose weekly reset days.
+- **Launcher news:** bundled notices, cached release checks and separate installed/latest release notes.
+- **Desktop window and installer:** launch in a dedicated app window and choose a folder for a fresh installation.
+
+See the [full release notes](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.8).
 
 ## Updates
 
-When a compatible published release is available, the project launcher's main action offers an **Update**. It verifies and stages the download before replacing program files, then returns to the launcher. Saved data stays in the separate local profile.
+Quit the running project to return to the launcher. Open its gear menu, choose **Check for updates**, then **Update**. The download is verified and staged before program files are replaced. The launcher returns afterward.
 
-Beta 5 and later also support updates inside the app and check at startup and every six hours while running. Open **Settings & backups → General → App controls**, choose **Check for updates**, see release information, choose **Download update**, then **Restart to update**. In Beta 5, App controls is under Local app in the settings drawer. Export a collection backup from Settings & backups before an update if you want an additional copy.
+Inside Patchlines, use **Settings & backups → General → App controls → Check for updates → Download update → Restart to update**. Checks run automatically at startup and every six hours. They do not force installation. Source commits alone do not update installed apps; the maintainer publishes a packaged release first.
 
-After the first update from an older edition to Beta 7, the older updater may reopen the browser. Choose **Quit Patchline**, then open your **Patchlines** shortcut or the new **Patchlines.exe** once to enter the project launcher. Subsequent updates started from the launcher return there when installation finishes.
+Saved data stays in the separate local profile. Export a collection backup from Settings & backups if you want an additional copy. The latest previous-version program and profile recovery copies are retained. If power loss interrupts replacement, quit any running copy and use **Restore Patchline.cmd** in that update workspace beside the app folder. Do not share recovery files publicly.
 
-The latest previous-version app and profile recovery copies are kept; older completed recovery copies are removed after a healthy update where cleanup succeeds. If power loss interrupts replacement, quit any running app and use that update workspace's **Restore Patchline.cmd** beside the application folder to restore the previous version. Do not share recovery files publicly.
+Beta 5 and later can use the updater. **Beta 4.1 and earlier need one manual upgrade to Beta 8.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
 
-The ZIP and installer edition share `%LOCALAPPDATA%\Patchline Beta` and reuse an existing portable profile. Store editions use a separate profile; export and restore a collection backup when changing between Store and GitHub editions. Browser appearance and permissions may need to be selected again.
+The installer and ZIP share `%LOCALAPPDATA%\Patchline Beta`. Store editions use a separate profile; transfer a collection backup when changing editions. Microsoft Store development and submissions remain deferred until the owner considers the app nearly complete and stable.
 
-**Beta 4.1 and earlier need one manual upgrade to Beta 7.** Quit the old app, install Beta 7 or extract its ZIP into a new folder, then open the new copy. Beta 5 and later can use the App controls update flow. A GitHub source commit alone does not produce an app update; the maintainer publishes a packaged release first.
+## Reminders and overlay
+
+Windows reminders are off by default. Enable them in **Settings → Reminders**, then choose Windows delivery on saved events. The project, launcher and PC must remain running; Windows notification settings can hide an offered alert. Use Windows reminders in the dedicated window. Browser reminders are available in the browser edition with permission and an open tab. Local Discord reminders need a configured webhook, automatic checks enabled, and an awake, online PC.
+
+Enable the optional overlay in **Settings → Gameplay overlay**. Its default shortcut is **Ctrl + Shift + O**. Lock mode passes clicks through; Settings and the tray can unlock it again. It is an ordinary Windows window for windowed and borderless games, and can be hidden by exclusive fullscreen.
+
+The optional Discord source reader uses a dedicated bot and approved channels. It runs while the local app runs. Original-server history requires the bot to have access there. Credentials are protected for the current Windows user and excluded from collection backups and diagnostics.
+
+## Uninstall and reinstall
+
+The installer edition offers the same data choices in every uninstall route:
+
+- **App controls → Open uninstall options** or **launcher gear → Uninstall project…** can remove the project and keep the launcher. Its main action becomes **Install**, which restores a verified same/newer release.
+- **Windows Installed apps → Patchlines → Uninstall** or **Uninstall Patchlines.exe** beside the launcher can remove both the project and launcher.
+- **Keep saved data** is selected by default. **Delete saved data** requires confirmation and removes the managed profile, protected Discord credentials, embedded browser data, internal backups and verified update recovery copies.
+
+Download a collection backup before deleting data if you want to keep your plans; credentials and browser site data are excluded. Browser data outside Patchlines, exported files and downloaded installers remain under your control. Portable ZIPs use manual folder removal. Microsoft Store manages its own package removal.
 
 ## Manual PowerShell startup
 
@@ -55,24 +93,10 @@ Wait for the ready message and open its printed address in your browser. Keep Po
 
 ## Requirements and local data
 
-Windows 11 x64 is the supported target. Some PCs need Microsoft's [Visual C++ x64 Redistributable](https://aka.ms/vc14/vc_redist.x64.exe). The package contains signed OpenJS Node and unsigned Cloudflare workerd. Manual startup uses the same runtime and may encounter the same Windows block. Report the exact blocked filename if startup fails.
+Windows 11 x64 is the supported target. The launcher uses .NET Framework 4.8. Some PCs need Microsoft's [Visual C++ x64 Redistributable](https://aka.ms/vc14/vc_redist.x64.exe). The desktop window needs the [WebView2 Evergreen Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). Its SDK assemblies, loader and license are bundled with Patchlines.
+
+The package contains signed OpenJS Node and unsigned Cloudflare workerd. Manual startup uses the same runtime and may encounter the same Windows block. Report the exact blocked filename if startup fails.
 
 Favourites, saved events and cached schedules stay on your PC. Fresh imports, remote artwork and linked resources need internet. Failed imports keep the last successful cache. Source coverage varies; unknown dates and estimated rewards retain their labels.
 
-Browser reminders need notification permission and an open tab. Local Discord reminders need a configured webhook, automatic checks enabled, and the app running on an awake, online PC. The optional Discord source reader uses a dedicated bot and approved channels; it runs only while the local app runs. Discord credentials are protected for the current Windows user and excluded from collection backups and diagnostics.
-
-Closing the browser alone leaves the app running. Use **Quit Patchline** or **Stop Patchline.cmd**. After quitting, the stopped screen reflects your launch method; native project sessions return to the launcher.
-
-## Uninstall and reinstall
-
-The GitHub installer edition has the same data choices in every uninstall route:
-
-- **App controls → Open uninstall options** or **launcher gear → Uninstall Patchlines project…** removes the project and keeps the launcher. Its main button becomes **Install**, which restores a verified same/newer release.
-- **Windows Installed apps → Patchlines → Uninstall** or **Uninstall Patchlines.exe** beside the launcher removes the complete installation.
-- **Keep saved data** is selected by default. **Delete saved data** requires confirmation and also removes the managed project profile, protected Discord credentials, internal backups and verified update recovery copies.
-
-Download a collection backup first if you want to keep your saves; credentials are excluded. Browser site data, exported files and downloaded installers remain under your control. The portable ZIP uses manual folder removal; Microsoft Store manages its package removal. See the privacy policy for details.
-
-Each package includes third-party licenses and source attribution. Game names and artwork belong to their respective publishers.
-
-Read the [privacy policy](PRIVACY.md). For help, [open a support issue](https://github.com/Keo-Reinz/patchline-downloads/issues) without including private backups or credentials.
+Packages include third-party licenses and source attribution. Game names and artwork belong to their respective publishers. Read the [privacy policy](PRIVACY.md). For help, [open a support issue](https://github.com/Keo-Reinz/patchline-downloads/issues) without including private backups or credentials.
