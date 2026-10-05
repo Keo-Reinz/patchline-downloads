@@ -1,6 +1,6 @@
 # Patchlines privacy policy
 
-Last updated: 4 October 2026
+Last updated: 5 October 2026
 
 This policy covers the local Windows Patchlines app, including its unsigned GitHub installer, portable GitHub ZIP and Microsoft Store distribution when available. The portable beta may display the name “Patchline” inside the app. The separately hosted website is outside this policy's scope.
 
@@ -54,7 +54,9 @@ You can edit preferences, remove saved events and reminder rules, disable backgr
 
 Use **App controls → Quit Patchlines** to stop the local runtime. Closing the browser alone can leave the backend running. Note the data folder displayed in App controls before uninstalling. The portable beta normally uses `%LOCALAPPDATA%\Patchline Beta`; the Store version uses a separate Patchlines profile, whose physical location can depend on Windows package storage.
 
-Deleting the portable app's extracted folder or uninstalling the GitHub desktop edition leaves its separate local profile behind. Do not assume that uninstalling a packaged app deletes every copy of your data: check for remaining profile files, browser site data and backups you exported elsewhere. To erase remaining local data, quit the app, remove its relevant data folder, clear its browser site data, and delete any exported backups, diagnostics or separately retained update downloads you no longer want. This also removes local saves and recovery copies, so export anything you wish to keep first.
+Starting at GitHub installer Beta 7, uninstall offers **Keep saved data** by default or **Delete saved data** after explicit confirmation. Keep saved data preserves the project profile and protected Discord connections for later installation. Delete saved data removes the managed project profile, its protected credentials, internal backups and update recovery copies whose recorded paths belong to that installation and profile. Uninstall refuses linked folders and pending updates. App controls and the launcher can remove the project while retaining shared launcher services; Windows Installed apps and the packaged uninstaller remove the full program installation.
+
+Browser site data, exported backups, diagnostics and installers saved elsewhere are outside this removal operation. Delete these separately through your browser or file controls if you no longer want them. Portable folder removal and older installer uninstalls retain their separate profile; quit the app before removing that profile manually. Microsoft Store manages its package removal. Export anything you wish to keep before deleting data. Collection backups exclude Discord credentials, so reconnect those after restoring a backup.
 
 Disconnecting Discord does not remove messages already delivered to a channel. Use Discord's controls for its messages and webhook. External services manage information already received under their own policies.
 
