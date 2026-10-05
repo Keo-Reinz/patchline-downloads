@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 8** adds announcement review, Windows reminders, a compact gameplay overlay, Today customisation, launcher news, a dedicated app window and a choice of installation folder. No Patchlines account is required.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 9** adds Honkai Impact 3rd, BrownDust2, Duet Night Abyss and upcoming Silver Palace to the game library, with publisher artwork, official news and guide links. It also adds optional online translation for public event titles and tags in the desktop window. The desktop tools from Beta 8 remain available. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 8 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.8)** and expand **Assets**.
+**[Open the Beta 9 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.9)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.8-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.8-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.9-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.9-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,7 +39,16 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 8
+## What's in Beta 9
+
+- **Four more game hubs:** Honkai Impact 3rd, BrownDust2 and Duet Night Abyss join the library with official news, guide shortcuts and genuine publisher/store artwork. Follow them to include them in shared views.
+- **Upcoming Silver Palace:** a separate library section and development-focused hub, with publisher news and game-filtered announcements. Its release date is unannounced; rewards and pull planning await verified release details.
+- **Selected official notices:** the existing Discord reader maps the four games' approved destination notices to their hubs. Only supported gameplay periods enter the timeline; publication timestamps, undated news and recruitment posts do not supply event dates. Coverage remains partial.
+- **Older Discord notices:** existing record IDs, read states, saved notices and owner reviews remain usable when Discord game names map to the new hubs. Reprocessing a matching notice retains one record.
+
+This update adds no permission requests or account requirements. Unknown dates and rewards retain their labels. Check the original notice's server, platform and access conditions.
+
+### Desktop tools retained from Beta 8
 
 - **Announcements & review:** search and filter collected notices, browse older results, preview images and open videos at their source, mark read or hide posts, review evidence and open matching events.
 - **Windows reminders and tray:** optional native alerts and shortcuts to Today, the launcher, pause reminders and quit.
@@ -48,7 +57,7 @@ The dedicated window and browser edition share this PC's saved project data. Bro
 - **Launcher news:** bundled notices, cached release checks and separate installed/latest release notes.
 - **Desktop window and installer:** launch in a dedicated app window and choose a folder for a fresh installation.
 
-See the [full release notes](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.8).
+After publication, the [Beta 9 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.9) includes the full notes and verified downloads.
 
 ## Updates
 
@@ -58,7 +67,7 @@ Inside Patchlines, use **Settings & backups → General → App controls → Che
 
 Saved data stays in the separate local profile. Export a collection backup from Settings & backups if you want an additional copy. The latest previous-version program and profile recovery copies are retained. If power loss interrupts replacement, quit any running copy and use **Restore Patchline.cmd** in that update workspace beside the app folder. Do not share recovery files publicly.
 
-Beta 5 and later can use the updater. **Beta 4.1 and earlier need one manual upgrade to Beta 8.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
+Beta 5 and later can use the updater once a compatible package is published. **Beta 4.1 and earlier need one manual upgrade to Beta 9 after publication.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
 
 The installer and ZIP share `%LOCALAPPDATA%\Patchline Beta`. Store editions use a separate profile; transfer a collection backup when changing editions. Microsoft Store development and submissions remain deferred until the owner considers the app nearly complete and stable.
 
