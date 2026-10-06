@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 10** adds automatic online publisher news for Honkai Impact 3rd, BrownDust2, Duet Night Abyss and upcoming Silver Palace, alongside Discord. It expands HI3's regional website coverage and BrownDust2's official notices, and shows per-game online check status in Announcements. The game hubs, optional translation and desktop tools from previous betas remain available. No Patchlines account is required.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11** adds a shared announcement feed that downloads supported game information without configuring a Discord bot. It also adds supported reward claim periods, including NIKKE's Cinderella Special, and includes the latest source audit and reliability checks. All eighteen game hubs and previous desktop tools remain available. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 10 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.10)** and expand **Assets**.
+**[Open the Beta 11 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.3)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.10-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.10-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.11.3-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.11.3-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,7 +39,10 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 10
+## What's in Beta 11
+
+- **Shared announcement feed:** central collection every six hours; the app checks for published information on startup and every thirty minutes. No friend bot setup is needed. Original sources, images and uncertainty remain attached; personal plans stay local.
+- **Reward claim periods:** supported in-game gift and claim windows enter the schedule. Paid offers, codes and unclear timing stay in Announcements.
 
 - **Automatic online news:** the four new games' public publisher announcements are collected on startup and every six hours while the app runs, independently of Discord. Recent collection covers the last two weeks and preserves previously stored inbox history.
 - **Official regional HI3 notices:** Global and SEA website evidence supplements official Steam announcements, with regional timing and uncertainty retained.
@@ -58,7 +61,7 @@ This update adds no permission requests or account requirements. Unknown dates a
 - **Launcher news:** bundled notices, cached release checks and separate installed/latest release notes.
 - **Desktop window and installer:** launch in a dedicated app window and choose a folder for a fresh installation.
 
-The [Beta 10 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.10) includes the full notes and verified downloads after publication.
+The [Beta 11 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.3) includes the full notes and verified downloads after publication.
 
 ## Updates
 
@@ -68,7 +71,7 @@ Inside Patchlines, use **Settings & backups → General → App controls → Che
 
 Saved data stays in the separate local profile. Export a collection backup from Settings & backups if you want an additional copy. The latest previous-version program and profile recovery copies are retained. If power loss interrupts replacement, quit any running copy and use **Restore Patchline.cmd** in that update workspace beside the app folder. Do not share recovery files publicly.
 
-Beta 5 and later can use the updater once a compatible package is published. **Beta 4.1 and earlier need one manual upgrade to Beta 10 after publication.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
+Beta 5 and later can use the updater once a compatible package is published. **Beta 4.1 and earlier need one manual upgrade to Beta 11 after publication.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
 
 The installer and ZIP share `%LOCALAPPDATA%\Patchline Beta`. Store editions use a separate profile; transfer a collection backup when changing editions. Microsoft Store development and submissions remain deferred until the owner considers the app nearly complete and stable.
 
