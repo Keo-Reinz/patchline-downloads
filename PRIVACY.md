@@ -1,6 +1,6 @@
 # Patchlines privacy policy
 
-Last updated: 5 October 2026
+Last updated: 6 October 2026
 
 This policy covers the local Windows Patchlines app, including its unsigned GitHub installer, portable GitHub ZIP and Microsoft Store distribution when available. The portable beta may display the name “Patchline” inside the app. The separately hosted website is outside this policy's scope.
 
@@ -52,6 +52,8 @@ The desktop window also depends on Microsoft's Evergreen WebView2 Runtime, which
   - Choosing the separate Google Translate link sends the selected title to Google in the link's query. [Google privacy policy](https://policies.google.com/privacy)
 
 ## App downloads, updates and support
+
+Starting at GitHub Beta 11, the app downloads a shared public announcement feed from the Patchlines downloads repository on startup and every thirty minutes while running. A separate GitHub Actions collector checks the registered public sources and approved official Discord announcement relays every six hours. Its dedicated bot token is held as an encrypted repository secret; friends do not receive it or need a bot connection. The public feed contains supported schedule facts, short titles, source links and available artwork links. It excludes full Discord posts, authors, personal planning records, private credentials and local review decisions. The app sends no local collection or profile data to this feed; GitHub receives ordinary connection information for the download. Original content and linked images remain subject to their publishers' policies. Downloaded information and each person's inbox choices are cached locally. Failed checks retain previous information and its actual source freshness.
 
 Microsoft handles Microsoft Store acquisition and app updates under the [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement). Patchlines' Store runtime directs you to Store updates. GitHub editions check the project's public releases for newer versions and cache release metadata locally. Starting at Beta 5, the app can download and stage a verified package when you choose **Download update**, then replace its program files when you choose **Restart to update**. Downloaded packages, staging state and an application rollback copy are stored locally. Update requests use GitHub's API and release download service without an embedded GitHub account token. Those services receive ordinary connection information, including your IP address and requested version or asset; the app does not send saved events or Discord credentials with update requests. Older ZIPs require a manual upgrade. [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)
 
