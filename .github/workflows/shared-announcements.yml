@@ -2,6 +2,12 @@ name: Refresh shared announcement feed
 
 on:
   workflow_dispatch:
+    inputs:
+      force_feeds:
+        description: 'Comma-separated online source IDs to refresh now (optional)'
+        required: false
+        default: ''
+        type: string
   schedule:
     - cron: '17 */6 * * *'
 
@@ -35,6 +41,7 @@ jobs:
         run: node --use-system-ca tools/shared-feed-collector.mjs
         env:
           PATCHLINE_DISCORD_BOT_TOKEN: ${{ secrets.PATCHLINE_DISCORD_BOT_TOKEN }}
+          PATCHLINE_FORCE_FEEDS: ${{ inputs.force_feeds || '' }}
       - name: Commit only the public feed
         env:
           GITHUB_TOKEN: ${{ github.token }}
