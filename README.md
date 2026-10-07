@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.5.1** improves schedule loading by fetching community history only when you browse it. Optional history, unconfirmed announcements and game resources remain available. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs and previous desktop tools remain available. No Patchlines account is required.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.6** adds rotating launcher artwork, installation storage checks, a manual update button beside Start and clearer release notes. The schedule performance fixes, optional history, unconfirmed announcements and game resources remain available. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs and previous desktop tools remain available. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 11.5.1 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.5.1)** and expand **Assets**.
+**[Open the Beta 11.6 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.6)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.11.5.1-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.11.5.1-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.11.6-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.11.6-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,7 +39,14 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 11.5.1
+## What's in Beta 11.6
+
+- **Installation storage:** open **launcher gear → Installation storage…**, or use **Storage → Check storage** beside App updates in **App controls**. User-triggered checks show installation size and space available on the drive; the launcher also shows drive capacity. Partial scans say **At least** and explain skipped entries or limits. Checks read file metadata only, with the separate saved profile outside the measured app folder.
+- **Rotating launcher artwork:** bundled images for all eighteen games, with matching game, publisher/artist credits and original source links. Archive and fan-art credits are retained. Rotation pauses while hidden, minimised or running the project; at most two images are decoded at once.
+- **Manual update button:** a square refresh button beside the smaller Start button checks for packaged releases. An available update changes the main action to **Update**.
+- **Clearer launcher UI:** vector action icons, rounded panels, clearer fonts, dark minimal scrollbars and native release-note headings, bullets and emphasis. Installed and latest release notes remain separate, with original text preserved.
+
+### Schedule history and source improvements retained
 
 - **Schedule loading:** current pages receive current records and archive counts. Historical records are excluded from the ordinary schedule payload and article overlay.
 - **Archived history:** optional GachaTracker history for 11 game hubs loads the selected games and a month or bounded week window, with a date jump, recent-history shortcut and separate loading status. Public history checks run at most daily while browsing the archive. Only safely dated completed activities are retained; coverage and server applicability remain limited.
@@ -74,17 +81,17 @@ This update adds no permission requests or account requirements. Unknown dates a
 
 BrownDust2's publisher currently refuses GitHub runner requests with HTTP 403. Its recovered schedule and artwork remain available in the shared feed; failed checks preserve prior information and freshness. Source coverage and artwork vary by activity.
 
-The [Beta 11.5.1 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.5.1) includes the full notes and verified downloads after publication.
+The [Beta 11.6 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.6) includes the full notes and verified downloads after publication.
 
 ## Updates
 
-Quit the running project to return to the launcher. Open its gear menu, choose **Check for updates**, then **Update**. The download is verified and staged before program files are replaced. The launcher returns afterward.
+Quit the running project to return to the launcher. Choose the square **Check for updates** refresh button beside **Start**, then **Update** when offered. The gear menu retains the same check. The download is verified and staged before program files are replaced. The launcher returns afterward.
 
 Inside Patchlines, use **Settings & backups → General → App controls → Check for updates → Download update → Restart to update**. Checks run automatically at startup and every six hours. They do not force installation. Source commits alone do not update installed apps; the maintainer publishes a packaged release first.
 
 Saved data stays in the separate local profile. Export a collection backup from Settings & backups if you want an additional copy. The latest previous-version program and profile recovery copies are retained. If power loss interrupts replacement, quit any running copy and use **Restore Patchline.cmd** in that update workspace beside the app folder. Do not share recovery files publicly.
 
-Beta 5 and later can use the updater once a compatible package is published. **Beta 4.1 and earlier need one manual upgrade to Beta 11.5.1 after publication.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
+Beta 5 and later can use the updater once a compatible package is published. **Beta 4.1 and earlier need one manual upgrade to Beta 11.6 after publication.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
 
 The installer and ZIP share `%LOCALAPPDATA%\Patchline Beta`. Store editions use a separate profile; transfer a collection backup when changing editions. Microsoft Store development and submissions remain deferred until the owner considers the app nearly complete and stable.
 
