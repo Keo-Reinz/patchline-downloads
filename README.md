@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11** adds a shared announcement feed that downloads supported game information without configuring a Discord bot. It also adds supported reward claim periods, including NIKKE's Cinderella Special, and includes the latest source audit and reliability checks. All eighteen game hubs and previous desktop tools remain available. No Patchlines account is required.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.4** improves announcement imports, adds missing game wallpapers and activity artwork, and keeps Settings navigation steady. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs and previous desktop tools remain available. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 11 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.3)** and expand **Assets**.
+**[Open the Beta 11.4 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.4)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.11.3-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.11.3-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.11.4-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.11.4-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,7 +39,12 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 11
+## What's in Beta 11.4
+
+- **Schedule imports:** Endfield's official version briefing supplies individual banners and event periods. Approved official linked posts and cached announcements receive current parsing. Unknown dates remain unknown.
+- **Activity artwork:** BrownDust2 and Duet Night Abyss use images from each notice section rather than borrowing a sibling activity's image. Missing source artwork keeps its fallback.
+- **Game backgrounds:** fifteen new 1440p or 4K images cover HI3, BrownDust2, Duet Night Abyss, Silver Palace, Limbus Company and Chaos Zero Nightmare, with source credits.
+- **Settings and updates:** categories stay at the same height. App controls shows successful and failed checks and when the next automatic update check is due.
 
 - **Shared announcement feed:** central collection every six hours; the app checks for published information on startup and every thirty minutes. No friend bot setup is needed. Original sources, images and uncertainty remain attached; personal plans stay local.
 - **Reward claim periods:** supported in-game gift and claim windows enter the schedule. Paid offers, codes and unclear timing stay in Announcements.
@@ -61,7 +66,9 @@ This update adds no permission requests or account requirements. Unknown dates a
 - **Launcher news:** bundled notices, cached release checks and separate installed/latest release notes.
 - **Desktop window and installer:** launch in a dedicated app window and choose a folder for a fresh installation.
 
-The [Beta 11 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.3) includes the full notes and verified downloads after publication.
+BrownDust2's publisher currently refuses GitHub runner requests with HTTP 403. Its recovered schedule and artwork remain available in the shared feed; failed checks preserve prior information and freshness. Source coverage and artwork vary by activity.
+
+The [Beta 11.4 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.4) includes the full notes and verified downloads after publication.
 
 ## Updates
 
@@ -71,7 +78,7 @@ Inside Patchlines, use **Settings & backups → General → App controls → Che
 
 Saved data stays in the separate local profile. Export a collection backup from Settings & backups if you want an additional copy. The latest previous-version program and profile recovery copies are retained. If power loss interrupts replacement, quit any running copy and use **Restore Patchline.cmd** in that update workspace beside the app folder. Do not share recovery files publicly.
 
-Beta 5 and later can use the updater once a compatible package is published. **Beta 4.1 and earlier need one manual upgrade to Beta 11 after publication.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
+Beta 5 and later can use the updater once a compatible package is published. **Beta 4.1 and earlier need one manual upgrade to Beta 11.4 after publication.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
 
 The installer and ZIP share `%LOCALAPPDATA%\Patchline Beta`. Store editions use a separate profile; transfer a collection backup when changing editions. Microsoft Store development and submissions remain deferred until the owner considers the app nearly complete and stable.
 
