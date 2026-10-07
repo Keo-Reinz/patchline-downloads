@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.4** improves announcement imports, adds missing game wallpapers and activity artwork, and keeps Settings navigation steady. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs and previous desktop tools remain available. No Patchlines account is required.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.5** adds optional community schedule history, an unconfirmed-announcement section and more game resources. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs and previous desktop tools remain available. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 11.4 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.4)** and expand **Assets**.
+**[Open the Beta 11.5 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.5)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.11.4-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.11.4-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.11.5-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.11.5-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,7 +39,11 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 11.4
+## What's in Beta 11.5
+
+- **Archived history:** optional GachaTracker history for 11 game hubs, with a date jump and monthly or bounded week views. Only safely dated completed activities are retained; coverage and server applicability remain limited.
+- **Dates unconfirmed:** collected official activity notices appear separately until matching evidence supplies dates. Character-only links remain possible matches.
+- **Resources:** additional Game8 news/version links and Enikk NIKKE character, team-usage and raid references.
 
 - **Schedule imports:** Endfield's official version briefing supplies individual banners and event periods. Approved official linked posts and cached announcements receive current parsing. Unknown dates remain unknown.
 - **Activity artwork:** BrownDust2 and Duet Night Abyss use images from each notice section rather than borrowing a sibling activity's image. Missing source artwork keeps its fallback.
@@ -68,7 +72,7 @@ This update adds no permission requests or account requirements. Unknown dates a
 
 BrownDust2's publisher currently refuses GitHub runner requests with HTTP 403. Its recovered schedule and artwork remain available in the shared feed; failed checks preserve prior information and freshness. Source coverage and artwork vary by activity.
 
-The [Beta 11.4 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.4) includes the full notes and verified downloads after publication.
+The [Beta 11.5 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.5) includes the full notes and verified downloads after publication.
 
 ## Updates
 
@@ -78,7 +82,7 @@ Inside Patchlines, use **Settings & backups → General → App controls → Che
 
 Saved data stays in the separate local profile. Export a collection backup from Settings & backups if you want an additional copy. The latest previous-version program and profile recovery copies are retained. If power loss interrupts replacement, quit any running copy and use **Restore Patchline.cmd** in that update workspace beside the app folder. Do not share recovery files publicly.
 
-Beta 5 and later can use the updater once a compatible package is published. **Beta 4.1 and earlier need one manual upgrade to Beta 11.4 after publication.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
+Beta 5 and later can use the updater once a compatible package is published. **Beta 4.1 and earlier need one manual upgrade to Beta 11.5 after publication.** Install the new edition or extract its ZIP into a new folder. Older direct browser sessions may reopen the browser after their first update; quit and open **Patchlines.exe** to enter the new launcher flow.
 
 The installer and ZIP share `%LOCALAPPDATA%\Patchline Beta`. Store editions use a separate profile; transfer a collection backup when changing editions. Microsoft Store development and submissions remain deferred until the owner considers the app nearly complete and stable.
 
