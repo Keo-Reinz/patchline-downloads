@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.10** reduces repeated schedule processing and background polling. Today, sourced reset times, dated announcements, download progress, update size details and rotating launcher artwork remain available. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs remain available. No Patchlines account is required.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.11** restores workspace navigation and Today shortcuts while retaining reduced schedule processing and lighter background polling. Today, sourced reset times, dated announcements, download progress, update size details and rotating launcher artwork remain available. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs remain available. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 11.10 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.10)** and expand **Assets**.
+**[Open the Beta 11.11 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.11)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.11.10-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.11.10-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.11.11-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.11.11-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download and a small `.size.json` metadata file used by update details. Choose the installer or ZIP to install the app. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,12 +39,12 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 11.10
+## What's in Beta 11.11
 
 - **Less repeated processing:** unchanged feed validation and schedule reconciliation are reused within bounded caches. Source corrections, health and uncertainty stay current.
 - **Lighter desktop polling:** the launcher reuses one status helper; disabled overlays and paused reminders skip schedule work. Update and quit actions release the helper safely.
 - **Incremental announcements:** quiet Discord checks update health, and changed games share one identity-maintenance pass.
-- **Efficient navigation:** unchanged schedule checks use conditional responses and keep card data stable across internal page changes. Automatic refreshes are coalesced; manual checks remain available.
+- **Reliable navigation:** workspace menus, game hubs and Today shortcuts open through ordinary page navigation, avoiding the production router error. Unchanged schedule processing remains cached, automatic refreshes are coalesced and manual checks remain available.
 
 ### Announcement features retained from Beta 11.9
 
@@ -110,7 +110,7 @@ This update adds no permission requests or account requirements. Unknown dates a
 
 BrownDust2's publisher currently refuses GitHub runner requests with HTTP 403. Its recovered schedule and artwork remain available in the shared feed; failed checks preserve prior information and freshness. Source coverage and artwork vary by activity.
 
-The [Beta 11.9 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.10) includes the full notes and verified downloads after publication.
+The [Beta 11.9 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.11) includes the full notes and verified downloads after publication.
 
 ## Updates
 
