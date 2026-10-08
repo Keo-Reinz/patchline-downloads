@@ -1,6 +1,6 @@
 # Patchlines privacy policy
 
-Last updated: 6 October 2026
+Last updated: 8 October 2026
 
 This policy covers the local Windows Patchlines app, including its unsigned GitHub installer, portable GitHub ZIP and Microsoft Store distribution when available. The portable beta may display the name “Patchline” inside the app. The separately hosted website is outside this policy's scope.
 
@@ -15,6 +15,8 @@ Some interface preferences, such as appearance, layout, filters, translation cho
 Starting at GitHub Beta 8, the dedicated Windows app window uses Microsoft Edge WebView2 with its own browser profile in the local data folder's `webview2` subfolder. This can hold site cookies, local storage, preferences and cached web resources, including data from external content you choose to load. It does not automatically inherit Chrome or Edge site preferences, cookies or sign-in sessions. The app window and browser edition share the same saved planning database, while keeping their browser site data separate.
 
 Windows reminder and overlay preferences are stored in the local database. The overlay also saves its window position and size in the local profile. Tray controls and the overlay use private local session tokens, command acknowledgements and reminder claims to coordinate the launcher and runtime. Reminder records indicate that an alert was offered; they do not prove that Windows displayed it or that you saw it. Event and checklist titles can be visible on your screen in the overlay or a notification.
+
+Selected game servers or publishers, personal reset overrides and timestamped daily/weekly completion receipts stay in the local planning database and collection backups. Reset reference rules ship with the app; viewing Today does not send your checklist or server choices to Game Time Master or another reset reference.
 
 Pull calculator values are temporary interface inputs rather than a persistent wallet. The local app also writes startup and error logs for troubleshooting, source-check status, reminder-delivery records and update-check caches.
 
