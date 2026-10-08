@@ -50,14 +50,24 @@ jobs:
           import {readFile} from 'node:fs/promises';
           const expected='keo-reinz/patchline-downloads';
           if(process.env.GITHUB_REPOSITORY?.toLowerCase()!==expected)throw new Error('Unexpected public feed repository.');
-          const pathname='data/announcements-v1.json',content=await readFile(pathname);
-          if(content.length>8*1024*1024)throw new Error('Shared feed exceeds its public byte limit.');
-          const base=`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}/contents/${pathname}`;
+          const files=await Promise.all(['data/announcements-v1.json','data/announcements-v2.json'].map(async(pathname,index)=>{
+            const version=index+1,content=await readFile(pathname);
+            if(content.length>8*1024*1024||JSON.parse(content).version!==version)throw new Error('Shared feed exceeds its public byte limit or has an invalid version.');
+            return {pathname,content};
+          }));
+          const base=`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}`;
           const headers={Authorization:`Bearer ${process.env.GITHUB_TOKEN}`,Accept:'application/vnd.github+json','Content-Type':'application/json','User-Agent':'Patchlines-Shared-Feed','X-GitHub-Api-Version':'2022-11-28'};
-          const current=await fetch(base,{headers,redirect:'error',signal:AbortSignal.timeout(30000)});
-          if(!current.ok&&current.status!==404)throw new Error(`Feed baseline request returned ${current.status}.`);
-          const previous=current.ok?await current.json():null;
-          const response=await fetch(base,{method:'PUT',headers,body:JSON.stringify({message:'Refresh public announcement feed',content:content.toString('base64'),...(previous?.sha?{sha:previous.sha}:{})}),redirect:'error',signal:AbortSignal.timeout(30000)});
-          if(!response.ok)throw new Error(`Feed publication returned ${response.status}.`);
-          console.log('Public announcement feed refreshed.');
+          const api=async(route,method='GET',body)=>{
+            const response=await fetch(base+route,{method,headers,...(body?{body:JSON.stringify(body)}:{}),redirect:'error',signal:AbortSignal.timeout(30000)});
+            if(!response.ok)throw new Error(`Feed publication returned ${response.status}.`);
+            return response.json();
+          };
+          const repository=await api(''),branch=repository.default_branch;
+          const head=await api(`/git/ref/heads/${encodeURIComponent(branch)}`),commit=await api(`/git/commits/${head.object.sha}`);
+          const tree=[];
+          for(const {pathname,content} of files){const blob=await api('/git/blobs','POST',{content:content.toString('base64'),encoding:'base64'});tree.push({path:pathname,mode:'100644',type:'blob',sha:blob.sha});}
+          const freshTree=await api('/git/trees','POST',{base_tree:commit.tree.sha,tree});
+          const freshCommit=await api('/git/commits','POST',{message:'Refresh public announcement feeds',tree:freshTree.sha,parents:[head.object.sha]});
+          await api(`/git/refs/heads/${encodeURIComponent(branch)}`,'PATCH',{sha:freshCommit.sha,force:false});
+          console.log('Both public announcement feeds refreshed atomically.');
           JS
