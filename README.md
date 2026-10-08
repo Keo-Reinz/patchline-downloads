@@ -4,12 +4,12 @@ Patchlines brings gacha game schedules, saved events, resources and pull estimat
 
 ## Choose a download
 
-**[Open the Beta 11.8 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.8)** and expand **Assets**.
+**[Open the Beta 11.9 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.9)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.11.8-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.11.8-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.11.9-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.11.9-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download and a small `.size.json` metadata file used by update details. Choose the installer or ZIP to install the app. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,7 +39,15 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 11.8
+## What's in Beta 11.9
+
+- **Dated announcements:** supported event, login, claim, costume, pass and shop notices become schedule activities while retaining their original source clocks and purchase conditions.
+- **Repeated reports and corrections:** matching notices attach evidence to the same activity; ambiguous matches and different games, servers, versions or draw pools stay separate for review.
+- **Saved-plan continuity:** provider and date changes keep saved activities and configured reminders linked. Bounded history and background reprocessing keep normal page reads efficient.
+- **Reliable shared collection:** both new and older app versions receive their supported feed. Edits during collection no longer prevent publication, and save conflicts show the correct explanation.
+- **Coverage stays explicit:** inaccessible text, unsupported wording and uncertain periods still need review. Unknown hours and rewards remain unknown.
+
+### Today features retained from Beta 11.8
 
 - **Today workspace:** immediate notices, saved deadlines and today's banners stay prominent. Customisation preserves section order, followed-game pins and the ending-soon window.
 - **Daily checkpoint:** tasks are grouped by game, with one-tap daily completion, undo and local reset countdowns. Weekly work stays visible after dailies are done, and All clear means every task is finished for its current reset.
@@ -95,7 +103,7 @@ This update adds no permission requests or account requirements. Unknown dates a
 
 BrownDust2's publisher currently refuses GitHub runner requests with HTTP 403. Its recovered schedule and artwork remain available in the shared feed; failed checks preserve prior information and freshness. Source coverage and artwork vary by activity.
 
-The [Beta 11.8 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.8) includes the full notes and verified downloads after publication.
+The [Beta 11.9 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.9) includes the full notes and verified downloads after publication.
 
 ## Updates
 
