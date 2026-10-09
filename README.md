@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.13** adds horizontal Today sections, clearer schedule browsing, gentle launcher artwork motion and a separate archive of previous release notes. Compatible updates retain changed-file downloads and lighter background processing. Today, sourced reset times, dated announcements, download progress, update size details and rotating launcher artwork remain available. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs remain available. No Patchlines account is required.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.14** refines the launcher with a desktop-transparent frame, continuous gentle wallpaper motion, centred sidebar icons and compact release browsing. Compatible updates retain changed-file downloads and lighter background processing. Today, sourced reset times, dated announcements, download progress, update size details and rotating launcher artwork remain available. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs remain available. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 11.13 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.13)** and expand **Assets**.
+**[Open the Beta 11.14 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.14)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.11.13-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.11.13-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.11.14-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.11.14-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download and a small `.size.json` metadata file used by update details, an update manifest and any available patch ZIPs with their checksums. Patch files are used automatically by compatible updaters. Choose the installer or ZIP to install the app. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,12 +39,18 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 11.13
+## What's in Beta 11.14
+
+- **Cleaner launcher:** the outer frame subtly reveals the desktop, while artwork and controls stay solid. Start sits directly on the artwork and sidebar icons share one centre line.
+- **Visible gentle motion:** wallpapers slowly pan and zoom throughout their display, with short crossfades. Cached images and four slow-motion redraws per second keep the effect light; motion pauses while inactive or the project is open.
+- **Compact release browsing:** single-line version entries fit more releases; full titles and dates remain in hover descriptions and release details. Each mouse-wheel notch moves one entry.
+
+### Today and schedule features retained from Beta 11.13
 
 - **Horizontal Today rows:** deadlines, today's banners and daily checkpoints each get a full-width section. Expand longer lists and keep the nearest deadlines and resets easy to reach.
 - **Readable checkpoints:** controls wrap to fit each card; daily completion, undo, weekly work, server choices and uncertainty stay available.
 - **Clearer schedule browsing:** affected games and sources are highlighted; still-running and early announcements are grouped by game with an All games view. Known opening and closing times have relative labels.
-- **Gentle launcher motion:** the existing artwork can pan slightly and crossfade. Choose Static, Crossfade or Gentle motion; animation pauses while the launcher is inactive or the app is open.
+- **Gentle launcher motion:** the existing artwork can pan and zoom slowly and crossfade. Choose Static, Crossfade or Gentle motion; animation pauses while the launcher is inactive or the app is open.
 - **Previous release notes:** older published Windows updates sit in a separate collapsed archive, with dates, source links and cached offline reading.
 
 ### Update features retained from Beta 11.12
@@ -121,7 +127,7 @@ This update adds no permission requests or account requirements. Unknown dates a
 
 BrownDust2's publisher currently refuses GitHub runner requests with HTTP 403. Its recovered schedule and artwork remain available in the shared feed; failed checks preserve prior information and freshness. Source coverage and artwork vary by activity.
 
-The [Beta 11.13 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.13) includes the full notes and verified downloads after publication.
+The [Beta 11.14 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.14) includes the full notes and verified downloads after publication.
 
 ## Updates
 
