@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.15** repairs duplicate schedule reports, malformed CZN patch activities and NIKKE raid enemy-list duplicates while preserving saved progress and reminder IDs. Compatible updates retain changed-file downloads and lighter background processing. Today, sourced reset times, dated announcements, download progress, update size details and rotating launcher artwork remain available. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs remain available. No Patchlines account is required.
+Patchlines brings gacha game schedules, saved events, resources and pull estimates into one local Windows app. **Beta 11.16** preserves matching event artwork, keeps dated announcements linked, expands verified featured details and adds animated launcher transitions. Saved progress and reminder IDs remain attached. Compatible updates retain changed-file downloads and lighter background processing. Today, sourced reset times, dated announcements, download progress, update size details and rotating launcher artwork remain available. The shared announcement feed supplies supported game information without configuring a Discord bot. All eighteen game hubs remain available. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 11.15 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.15)** and expand **Assets**.
+**[Open the Beta 11.16 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.16)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.11.15-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.11.15-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.11.16-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.11.16-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download and a small `.size.json` metadata file used by update details, an update manifest and any available patch ZIPs with their checksums. Patch files are used automatically by compatible updaters. Choose the installer or ZIP to install the app. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,7 +39,15 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 11.15
+## What's in Beta 11.16
+
+- **Richer schedule artwork:** matching reports can share their specific event or banner image independently of which source supplies dates. Sparse refreshes keep proven media for the same activity.
+- **Reliable announcement links:** dated activities resolve through canonical identities; unresolved dated matches show their periods and a clear review label.
+- **Verified featured details:** supported Endfield, GFL2 and NTE records retain exact named character or weapon details. Reverse: 1999, CZN Combatants and HI3 battlesuits gain exact named portraits; PGR retains typed featured names. Unsupported variants and lineups remain unfilled.
+- **Animated launch and quit:** short transitions follow actual runtime readiness and shutdown, with reduced motion and failure recovery.
+- **Smaller compatible downloads:** Beta 11.15 reuses unchanged verified runtime files through the published patch; the native launcher is updated for transitions.
+
+### Schedule features retained from Beta 11.15
 
 - **One corroborated activity:** matching calendar, guide and publisher reports share one card, retaining source evidence and uncertainty. Conflicting regions, versions and repeated cycles stay distinct.
 - **Correct patch sections:** CZN notices keep named activity periods instead of repeating the patch title as a costume. NIKKE enemy lists remain supporting raid information.
@@ -134,7 +142,7 @@ This update adds no permission requests or account requirements. Unknown dates a
 
 BrownDust2's publisher currently refuses GitHub runner requests with HTTP 403. Its recovered schedule and artwork remain available in the shared feed; failed checks preserve prior information and freshness. Source coverage and artwork vary by activity.
 
-The [Beta 11.15 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.15) includes the full notes and verified downloads after publication.
+The [Beta 11.16 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.11.16) includes the full notes and verified downloads after publication.
 
 ## Updates
 
