@@ -1,0 +1,52 @@
+name: Diagnose public Game8 collection
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Use the collector Node runtime
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24.21.0'
+          package-manager-cache: false
+      - name: Check the fixed public indexes
+        run: |
+          node --use-system-ca --input-type=module <<'JS'
+          const sources=[
+            ['wuwa','Wuthering-Waves','453473'],
+            ['zzz','Zenless-Zone-Zero','457176'],
+            ['hsr','Honkai-Star-Rail','408749'],
+            ['genshin','Genshin-Impact','301601'],
+            ['endfield','Arknights-Endfield','535443'],
+            ['nte','Neverness-to-Everness','592073'],
+            ['czn','Chaos-Zero-Nightmare','559899'],
+            ['uma','Umamusume-Pretty-Derby','541830'],
+          ];
+          const names=new Set(['Error','TypeError','SyntaxError','AbortError','TimeoutError']);
+          const codes=new Set(['CERT_HAS_EXPIRED','CERT_NOT_YET_VALID','DEPTH_ZERO_SELF_SIGNED_CERT','SELF_SIGNED_CERT_IN_CHAIN','UNABLE_TO_VERIFY_LEAF_SIGNATURE','UNABLE_TO_GET_ISSUER_CERT_LOCALLY','ERR_TLS_CERT_ALTNAME_INVALID','ENOTFOUND','EAI_AGAIN','ETIMEDOUT','UND_ERR_CONNECT_TIMEOUT','UND_ERR_HEADERS_TIMEOUT','UND_ERR_BODY_TIMEOUT','ECONNRESET','ECONNREFUSED','EHOSTUNREACH','ENETUNREACH','UND_ERR_SOCKET']);
+          function safeCodes(error,depth=0){
+            if(!error||typeof error!=='object'||depth>3)return [];
+            return [...(codes.has(error.code)?[error.code]:[]),...safeCodes(error.cause,depth+1),...(Array.isArray(error.errors)?error.errors.slice(0,4).flatMap(item=>safeCodes(item,depth+1)):[])];
+          }
+          for(const [game,slug,id] of sources){
+            const signal=AbortSignal.timeout(12000);let response,reader;
+            try{
+              response=await fetch(`https://game8.co/games/${slug}/archives/${id}`,{redirect:'manual',headers:{accept:'text/html','User-Agent':'Patchline/0.1 (+https://github.com/Keo-Reinz/patchline-downloads)'},signal});
+              reader=response.body?.getReader();let size=0;const chunks=[];
+              if(reader){const cancel=()=>{void reader.cancel().catch(()=>{});};signal.addEventListener('abort',cancel,{once:true});
+                try{for(;;){signal.throwIfAborted();const part=await reader.read();signal.throwIfAborted();if(part.done)break;size+=part.value.byteLength;if(size>2_000_000)throw new Error('bounded-body');chunks.push(part.value);}}
+                finally{signal.removeEventListener('abort',cancel);}
+              }
+              const text=Buffer.concat(chunks).toString('utf8');
+              console.log(JSON.stringify({source:`game8-${game}`,status:response.status,bodyWithinLimit:size<=2_000_000,articleHeading:/p-archiveHeader__title/.test(text),eventHeadings:/a-header/.test(text)}));
+            }catch(error){console.log(JSON.stringify({source:`game8-${game}`,status:response?.status??null,name:names.has(error.name)?error.name:'Error',causeCodes:[...new Set(safeCodes(error))]}));}
+            finally{if(reader){void reader.cancel().catch(()=>{});reader.releaseLock();}else{void response?.body?.cancel().catch(()=>{});}}
+          }
+          JS
