@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings automatic game schedules, banners and events into one local Windows app. **Beta 12.1** uses uma.moe dates for matching Umamusume banners and events, including labelled estimated endings and cached reports during delayed refreshes. Confirmed cycles remain visible, while missing dates and conflicting reports retain their labels. Beta 12's dated announcement imports, source checks, saved plans, reminders, Today and launcher remain available. Compatible verified Beta 12 installations can download a changed-file patch. The shared feed supplies supported game information without configuring a Discord bot. No Patchlines account is required.
+Patchlines brings automatic game schedules, banners and events into one local Windows app. **Beta 12.2** adds an optional Spending planner for subscriptions, passes and one-off purchases. Enter your prices and dates, compare upcoming costs with a monthly budget, and record payments. Plans and payment history are included in local backups. Existing schedule, source, Today and reminder features remain available. Compatible verified Beta 12.1 installations can download a changed-file patch. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 12.1 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.12.1)** and expand **Assets**.
+**[Open the Beta 12.2 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.12.2)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.12.1-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.12.1-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.12.2-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.12.2-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download and a small `.size.json` metadata file used by update details, an update manifest and any available patch ZIPs with their checksums. Patch files are used automatically by compatible updaters. Choose the installer or ZIP to install the app. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,7 +39,14 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 12.1
+## What's in Beta 12.2
+
+- **Spending planner:** group subscriptions, passes and one-off plans by game; enter prices and dates, choose tiers and repeat periods, and use the 30/60/90-day track and calendar.
+- **Monthly budget and receipts:** see upcoming costs and record or undo payments. Paid amounts remain in totals after a plan is paused or its next date is cleared. Unknown prices and conversions remain labelled.
+- **Saved plans and backups:** planner edits persist locally. Older backups without planner data preserve existing plans. Phase 2 spending reminders remain deferred.
+- **Smaller compatible update:** verified Beta 12.1 installations can use a changed-file patch, with the complete verified package as fallback.
+
+### Umamusume dates retained from Beta 12.1
 
 - **Preferred Umamusume dates:** matching banners and events use uma.moe's dates, including labelled estimated endings. Cached dates stay consistent through delayed refreshes, and confirmed cycles remain visible when another source still forecasts them.
 - **Preserved evidence and progress:** exact times convert to your chosen timezone, date-only reports retain their calendar days, and unknown endings stay unknown. Matching artwork, existing rewards, saved plans and reminder links remain available. Distinct servers, pools, recurring cycles and league-selection periods stay separate.
@@ -156,7 +163,7 @@ This update adds no permission requests or account requirements. Unknown dates a
 
 BrownDust2's publisher currently refuses GitHub runner requests with HTTP 403. Its recovered schedule and artwork remain available in the shared feed; failed checks preserve prior information and freshness. Source coverage and artwork vary by activity.
 
-The [Beta 12.1 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.12.1) includes the full notes and verified downloads after publication.
+The [Beta 12.2 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.12.2) includes the full notes and verified downloads after publication.
 
 ## Updates
 
