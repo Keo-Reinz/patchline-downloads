@@ -1,15 +1,15 @@
 # Patchlines downloads
 
-Patchlines brings automatic game schedules, banners and events into one local Windows app. **Beta 12.2** adds an optional Spending planner for subscriptions, passes and one-off purchases. Enter your prices and dates, compare upcoming costs with a monthly budget, and record payments. Plans and payment history are included in local backups. Existing schedule, source, Today and reminder features remain available. Compatible verified Beta 12.1 installations can download a changed-file patch. No Patchlines account is required.
+Patchlines brings automatic game schedules, banners and events into one local Windows app. **Beta 12.3** refines the optional Spending planner with a **Didn't pay** choice for overdue payments and a centred page width. Beta 12.2 added the planner for subscriptions, passes and one-off purchases. Enter your prices and dates, compare upcoming costs with a monthly budget, and record payments. Plans and payment history are included in local backups. Existing schedule, source, Today and reminder features remain available. Compatible verified Beta 12.2 installations can download a changed-file patch. No Patchlines account is required.
 
 ## Choose a download
 
-**[Open the Beta 12.2 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.12.2)** and expand **Assets**.
+**[Open the Beta 12.3 download page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.12.3)** and expand **Assets**.
 
 | Download | File to choose | How to use it |
 | --- | --- | --- |
-| Windows installer | `Patchlines-0.1.0-beta.12.2-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
-| Portable ZIP | `Patchline-0.1.0-beta.12.2-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
+| Windows installer | `Patchlines-0.1.0-beta.12.3-windows-x64-setup.exe` | Install for your Windows account, then open Patchlines from Start |
+| Portable ZIP | `Patchline-0.1.0-beta.12.3-windows-x64.zip` | Extract the entire folder, then open Patchlines.exe |
 | Microsoft Store | Deferred | A Store link will be added after development, certification and publication finish |
 
 The release also includes a matching `.sha256` file for each download and a small `.size.json` metadata file used by update details, an update manifest and any available patch ZIPs with their checksums. Patch files are used automatically by compatible updaters. Choose the installer or ZIP to install the app. The GitHub installer and ZIP remain unsigned, so Windows or security software can warn about or block them. Release installation does not require importing a test certificate.
@@ -39,7 +39,13 @@ The window uses Microsoft's WebView2 Evergreen Runtime. If it cannot open, choos
 
 The dedicated window and browser edition share this PC's saved project data. Browser-only appearance, cookies and permissions stay in each browser profile, so those choices may need to be selected again in the new window.
 
-## What's in Beta 12.2
+## What's in Beta 12.3
+
+- **Didn't pay:** overdue payments can be cleared without counting them as spending. Repeating plans move to their next date from today; one-off plans return to **No date yet**. An **Undo** note restores the payment.
+- **Consistent layout:** the Spending planner uses the same centred page width as the other workspaces.
+- **Smaller compatible update:** verified Beta 12.2 installations can use a changed-file patch, with the complete verified package as fallback.
+
+### Spending planner from Beta 12.2
 
 - **Spending planner:** group subscriptions, passes and one-off plans by game; enter prices and dates, choose tiers and repeat periods, and use the 30/60/90-day track and calendar.
 - **Monthly budget and receipts:** see upcoming costs and record or undo payments. Paid amounts remain in totals after a plan is paused or its next date is cleared. Unknown prices and conversions remain labelled.
@@ -163,7 +169,7 @@ This update adds no permission requests or account requirements. Unknown dates a
 
 BrownDust2's publisher currently refuses GitHub runner requests with HTTP 403. Its recovered schedule and artwork remain available in the shared feed; failed checks preserve prior information and freshness. Source coverage and artwork vary by activity.
 
-The [Beta 12.2 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.12.2) includes the full notes and verified downloads after publication.
+The [Beta 12.3 release page](https://github.com/Keo-Reinz/patchline-downloads/releases/tag/v0.1.0-beta.12.3) includes the full notes and verified downloads after publication.
 
 ## Updates
 
